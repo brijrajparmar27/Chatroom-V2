@@ -1,0 +1,14 @@
+.content_contain{
+    display: flex;
+    justify-content: center;
+}
+.content_contain .chat_contain{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 80%;
+    /* background-color: antiquewhite;  */
+    max-height: 82vh;
+    /* overflow: scroll; */
+    overflow-y: scroll;
+}

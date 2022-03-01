@@ -1,0 +1,58 @@
+.inpbox_cont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  /* position: fixed;
+  bottom: 0px; */
+}
+.inpbox_cont .inputbox {
+  background-color: white;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: purple; */
+  border-radius: 10px;
+  width: 80%;
+}
+
+.inpbox_cont .inputbox form {
+  /* background-color: aqua; */
+  width: 100%;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 9fr 1fr;
+  grid-template-areas: "tb sub";
+  margin: 10px;
+}
+
+.inpbox_cont .inputbox .msg_inp {
+  grid-area: tb;
+  border: none;
+  outline: none;
+  /* height: 30px; */
+  font-size: 25px;
+}
+.inpbox_cont .inputbox .subbtn_cont {
+  grid-area: sub;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.inpbox_cont .inputbox .submit_btn {
+  background-color: #161819;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 50px;
+  font-size: 25px;
+  border-radius: 100px;
+  outline: none;
+  border: none;
+}

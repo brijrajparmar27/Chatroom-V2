@@ -1,10 +1,26 @@
+import useSignIn from "../../hooks/useSignIn";
 import { FcGoogle } from "react-icons/fc";
 import "./Login.css";
+import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import useAuthContext from "../../hooks/useAuthContext";
 
 const Login = () => {
-  const handleLogin = ()=>{
-    
-  }
+
+  const {user, setUser, AuthisReady} = useAuthContext();
+
+  const { Signin } = useSignIn();
+  const navig = useNavigate();
+
+  const handleLogin = () => {
+    Signin();
+  };
+
+  useEffect(() => {
+    // console.log(user);
+    user && navig("/home");
+  }, [user]);
+
   return (
     <div className="login">
       <div className="login_contain">

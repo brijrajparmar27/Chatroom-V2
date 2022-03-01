@@ -1,0 +1,46 @@
+.home{
+    background-color: rgb(250, 250, 250);
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 5fr;
+    grid-template-areas: "navig content";
+    height: 100vh;
+    width: 100%;
+}
+.home .content{
+    display: grid;
+    grid-template-rows: 0.8fr 8fr 1fr;
+    grid-template-columns: 1fr;
+    grid-template-areas: "header"
+    "content"
+    "inpbox";
+    grid-area: content;
+    background-color: rgb(250, 250, 250);
+}
+
+.content .header_contain{
+    grid-area: header;
+    /* background-color: aqua; */
+}
+
+.content .content_contain{
+    grid-area: content;
+    /* background-color: blue; */
+    max-height: 81vh;
+    overflow:hidden;
+}
+
+.content .inpbox_cont{
+    grid-area: inpbox;
+    /* background-color: cadetblue; */
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    /* position: fixed;
+    bottom: 0px; */
+}
+
+.home .navig{
+    grid-area: navig;
+    background-color: transparent;
+}
