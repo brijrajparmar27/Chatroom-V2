@@ -54,6 +54,7 @@
     gap: 20px;
 }
 .navig .navig_cont .room_contain .room{
+    cursor: pointer;
     font-family: Arial, Helvetica, sans-serif;
     color: #B8BECC;
     display: flex;

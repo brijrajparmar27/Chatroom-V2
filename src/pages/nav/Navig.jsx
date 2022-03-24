@@ -2,10 +2,12 @@ import useAuthContext from "../../hooks/useAuthContext";
 import useRoom from "../../hooks/useRoom";
 import { FiLogOut } from "react-icons/fi";
 import "./Navig.css";
+import useLogout from "../../hooks/useLogout";
 
 const Navig = () => {
   const { user, setUser, AuthIsReady } = useAuthContext();
   const { room, setRoom, allRooms } = useRoom();
+  const {Logout} = useLogout();
   // console.log(user);
 
   const handleRoomChange = (data) => {
@@ -14,7 +16,8 @@ const Navig = () => {
   };
 
   return (
-    <div className="navig">
+    <>
+    { user && <div className="navig">
       <h1 className="app_title">Chatroom.</h1>
       <div className="navig_cont">
         <div className="room_contain">
@@ -37,12 +40,13 @@ const Navig = () => {
         <div className="prof_cont">
           <img src={user.photoURL} className="dp" />
           <h2 className="name">{user.displayName}</h2>
-          <div className="logout_cont">
+          <div className="logout_cont" onClick={Logout}>
             <FiLogOut />
           </div>
         </div>
       </div>
-    </div>
+    </div>}
+    </>
   );
 };
 
