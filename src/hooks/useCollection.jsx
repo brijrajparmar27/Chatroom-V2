@@ -5,14 +5,17 @@ const useCollection = (collection) => {
 
   const ref = firestore.collection(collection);
   const [docs, setDocs] = useState(null);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
+    setLoading(true);
     const unsub = ref.onSnapshot((snapshot) => {
       let entries = [];
       snapshot.docs.forEach((each) => {
         entries.push({ id: each.id, ...each.data() });
     });
     setDocs(entries);
+    setLoading(false);
     });
 
     return () => unsub();
@@ -27,7 +30,7 @@ const useCollection = (collection) => {
     }
   };
 
-  return { docs, Send };
+  return { docs, Send, loading };
 };
 
 export default useCollection;

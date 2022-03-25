@@ -19,6 +19,7 @@ const InputBox = () => {
       name: user.displayName,
       timestamp: date,
       url: user.photoURL,
+      uid: user.uid
     };
 
     Send(newDoc);

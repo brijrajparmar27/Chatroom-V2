@@ -5,10 +5,17 @@
 .content_contain .chat_contain{
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    /* gap: 20px; */
     width: 80%;
     /* background-color: antiquewhite;  */
     max-height: 82vh;
     /* overflow: scroll; */
     overflow-y: scroll;
+}
+.lottie_contain{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
