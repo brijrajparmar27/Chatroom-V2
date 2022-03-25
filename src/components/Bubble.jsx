@@ -9,7 +9,7 @@ const Bubble = ({ doc, show_name_label }) => {
   let isFirstmsg = show_name_label ? "block" : "none";
   return (
     <div className="bubble_contain">
-      <div className={doc.uid === user.uid ? "right" : "left"}>
+      {user && <div className={doc.uid === user.uid ? "right" : "left"}>
         <div className="msg_contain">
           <div className="dpimg_contain">
             <img
@@ -36,7 +36,7 @@ const Bubble = ({ doc, show_name_label }) => {
             )}
           </div>
         </div>
-      </div>
+      </div>}
     </div>
   );
 };
